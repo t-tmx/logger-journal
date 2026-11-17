@@ -1,0 +1,74 @@
+{
+  "name": "logger-journal",
+  "version": "0.1.0",
+  "description": "A zero-dependency, TypeScript-friendly logging library featuring hierarchical loggers, customizable colored levels, and pluggable appenders.",
+  "author": {
+    "name": "t-tmx",
+    "email": "328762148+t-tmx@users.noreply.github.com",
+    "url": "https://github.com/t-tmx"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-tmx/logger-journal.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsdown && tsc",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "logger",
+    "logging",
+    "log",
+    "logmanager",
+    "log-manager",
+    "appender",
+    "appenders",
+    "hierarchical",
+    "hierarchical-logger",
+    "log-levels",
+    "custom-levels",
+    "console-logger",
+    "file-logger",
+    "plaintext",
+    "zero-dependency",
+    "no-dependencies",
+    "typescript",
+    "journal"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^22.20.5",
+    "@vitest/coverage-v8": "^5.1.0",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "tsdown": "^0.23.7",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
